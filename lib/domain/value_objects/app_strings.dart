@@ -28,6 +28,8 @@ const String pleaseEnterAValidEmailAddress =
 const String createAccount = 'Create Account';
 const String firstName = 'First Name';
 const String lastName = 'Last Name';
+const String enterLastName = 'Enter your last name';
+const String enterFirstName = 'Enter your first name';
 const String acceptTermsConditions = 'Accept Terms and Conditions';
 const String alreadyHaveAnAccount = 'Already have an account? ';
 
@@ -39,3 +41,4 @@ const String forgotPasswordPageDescription =
 const String sendResetCode = 'Send Reset Code';
 
 const String pleaseEnterYour  = 'Please enter your';
+const String agreeToTerms  = 'Please agree to Terms & Conditions';

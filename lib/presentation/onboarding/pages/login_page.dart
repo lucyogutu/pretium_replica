@@ -91,8 +91,7 @@ class _LoginPageState extends State<LoginPage> {
                         return null;
                       },
                     ),
-                    smallVerticalSizedBox,
-                    mediumVerticalSizedBox,
+                    size24VerticalSizedBox,
                     TextFormField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
