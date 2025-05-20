@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pretium_replica/Presentation/onboarding/pages/onboarding_page.dart';
+import 'package:pretium_replica/presentation/routing/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Pretium Replica',
       theme: ThemeData(
         useMaterial3: true,
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
           color: Colors.teal[800],
         ),
       ),
-      home: const OnboardingPage(),
+      routerConfig: router,
     );
   }
 }

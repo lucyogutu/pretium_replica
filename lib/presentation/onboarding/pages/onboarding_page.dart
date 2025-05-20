@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:pretium_replica/application/entities/onboarding_data.dart';
-import 'package:pretium_replica/application/utils.dart';
-import 'package:pretium_replica/application/value_objects/app_strings.dart';
-import 'package:pretium_replica/application/value_objects/spaces.dart';
+import 'package:go_router/go_router.dart';
+import 'package:pretium_replica/domain/entities/onboarding_data.dart';
+import 'package:pretium_replica/domain/utils.dart';
+import 'package:pretium_replica/domain/value_objects/app_strings.dart';
+import 'package:pretium_replica/domain/value_objects/spaces.dart';
+import 'package:pretium_replica/presentation/routing/route_names.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnboardingPage extends StatefulWidget {
@@ -28,13 +30,13 @@ class _OnboardingPageState extends State<OnboardingPage> {
                 top: 0,
                 right: 0,
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () => context.go(loginPage),
                   child: Text(
                     skip,
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                                    fontWeight: FontWeight.w600,
-                                    color: Colors.grey[600],
-                                  ),
+                          fontWeight: FontWeight.w600,
+                          color: Colors.grey[600],
+                        ),
                   ),
                 ),
               ),
@@ -61,7 +63,10 @@ class _OnboardingPageState extends State<OnboardingPage> {
                               .withValues(alpha: 0.15),
                         ),
                         padding: const EdgeInsets.all(18.0),
-                        child: Icon(pageData.icon, size: 50,),
+                        child: Icon(
+                          pageData.icon,
+                          size: 50,
+                        ),
                       ),
                       largeVerticalSizedBox,
                       Text(
@@ -73,9 +78,10 @@ class _OnboardingPageState extends State<OnboardingPage> {
                       mediumVerticalSizedBox,
                       Text(
                         pageData.description,
-                        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                              color: Colors.grey[600]
-                            ),
+                        style: Theme.of(context)
+                            .textTheme
+                            .bodyLarge
+                            ?.copyWith(color: Colors.grey[600]),
                       ),
                       const Spacer(),
                     ],
@@ -106,13 +112,22 @@ class _OnboardingPageState extends State<OnboardingPage> {
                       width: double.infinity,
                       height: 50,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () => onLastPage
+                            ? context.go(loginPage)
+                            : _pageController.nextPage(
+                                duration: const Duration(
+                                  milliseconds: 500,
+                                ),
+                                curve: Curves.easeIn,
+                              ),
                         style: ButtonStyle(
-                            shape:
-                                WidgetStateProperty.all<RoundedRectangleBorder>(
-                                    RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10.0),
-                        ))),
+                          shape:
+                              WidgetStateProperty.all<RoundedRectangleBorder>(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                            ),
+                          ),
+                        ),
                         child: Text(
                           onLastPage ? getStarted : next,
                           style:
