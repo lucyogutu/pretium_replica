@@ -1,10 +1,12 @@
+import 'package:flutter/material.dart';
+
 class OnboardingData {
-  final String asset;
+  final IconData icon;
   final String title;
   final String description;
 
   OnboardingData({
-    required this.asset,
+    required this.icon,
     required this.title,
     required this.description,
   });

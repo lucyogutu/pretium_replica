@@ -27,6 +27,9 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
+        iconTheme: IconThemeData(
+          color: Colors.teal[800],
+        ),
       ),
       home: const OnboardingPage(),
     );

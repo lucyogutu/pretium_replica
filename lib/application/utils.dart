@@ -1,19 +1,20 @@
+import 'package:flutter/material.dart';
 import 'package:pretium_replica/application/entities/onboarding_data.dart';
 import 'package:pretium_replica/application/value_objects/app_strings.dart';
 
 List<OnboardingData> onboardingData = <OnboardingData>[
   OnboardingData(
-    asset: '',
+    icon: Icons.credit_card_rounded,
     title: pageOneTitle,
     description: pageOneDescription,
   ),
   OnboardingData(
-    asset: '',
+    icon: Icons.account_balance_wallet,
     title: pageTwoTitle,
     description: pageTwoDescription,
   ),
   OnboardingData(
-    asset: '',
+    icon: Icons.receipt_long_rounded,
     title: pageThreeTitle,
     description: pageThreeDescription,
   ),

@@ -31,6 +31,10 @@ class _OnboardingPageState extends State<OnboardingPage> {
                   onPressed: () {},
                   child: Text(
                     skip,
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                                    fontWeight: FontWeight.w600,
+                                    color: Colors.grey[600],
+                                  ),
                   ),
                 ),
               ),
@@ -50,15 +54,14 @@ class _OnboardingPageState extends State<OnboardingPage> {
                     children: <Widget>[
                       const Spacer(),
                       Container(
-                        width: 60,
-                        height: 60,
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           color: Theme.of(context)
                               .primaryColor
-                              .withValues(alpha: 0.2),
+                              .withValues(alpha: 0.15),
                         ),
-                        padding: const EdgeInsets.all(16.0),
+                        padding: const EdgeInsets.all(18.0),
+                        child: Icon(pageData.icon, size: 50,),
                       ),
                       largeVerticalSizedBox,
                       Text(
