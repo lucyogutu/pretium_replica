@@ -14,7 +14,7 @@ const String signInToContinue = 'Sign in to continue';
 const String email = 'Email';
 const String password = 'Password';
 const String rememberMeString = 'Remember me';
-const String forgotPassword = 'Forgot Password?';
+const String forgotPassword = 'Forgot Password';
 const String login = 'Login';
 const String dontHaveAccount = 'Don\'t have an account? ';
 const String signUp = 'Sign Up';
@@ -24,3 +24,18 @@ const String enterYourPassword = 'Enter your password';
 
 const String pleaseEnterAValidEmailAddress =
     'Please enter a valid email address';
+
+const String createAccount = 'Create Account';
+const String firstName = 'First Name';
+const String lastName = 'Last Name';
+const String acceptTermsConditions = 'Accept Terms and Conditions';
+const String alreadyHaveAnAccount = 'Already have an account? ';
+
+const String createAccountPageDescription =
+    'Simplify your crypto payments with us';
+
+const String forgotPasswordPageDescription =
+    'Enter your email to receive a password reset code';
+const String sendResetCode = 'Send Reset Code';
+
+const String pleaseEnterYour  = 'Please enter your';

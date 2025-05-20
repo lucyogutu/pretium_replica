@@ -83,7 +83,9 @@ class _LoginPageState extends State<LoginPage> {
                         });
                       },
                       validator: (String? value) {
-                        if (!emailRegex.hasMatch(value!) || value.isEmpty) {
+                        if (value?.isEmpty ?? false) {
+                          return '$pleaseEnterYour $email';
+                        } else if (!emailRegex.hasMatch(value!)) {
                           return pleaseEnterAValidEmailAddress;
                         }
                         return null;
@@ -119,6 +121,12 @@ class _LoginPageState extends State<LoginPage> {
                         label: Text(password),
                         hintText: enterYourPassword,
                       ),
+                      validator: (String? value) {
+                        if (value?.isEmpty ?? false) {
+                          return '$pleaseEnterYour $password';
+                        }
+                        return null;
+                      },
                     ),
                     mediumVerticalSizedBox,
                   ],
@@ -142,7 +150,7 @@ class _LoginPageState extends State<LoginPage> {
                   const Spacer(),
                   TextButton(
                     onPressed: () => context.push(forgotPasswordPage),
-                    child: Text(forgotPassword),
+                    child: Text('$forgotPassword?'),
                   ),
                 ],
               ),
@@ -162,9 +170,8 @@ class _LoginPageState extends State<LoginPage> {
                     if (_loginFormKey.currentState!.validate()) {
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
-                          content: Text(
-                            'Processing Data for Email: $emailValue'
-                          ),
+                          content:
+                              Text('Processing Data for Email: $emailValue'),
                         ),
                       );
                     }
