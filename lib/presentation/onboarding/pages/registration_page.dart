@@ -30,7 +30,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
           padding: const EdgeInsets.all(16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
+            children: <Widget>[
               mediumVerticalSizedBox,
               Text(
                 createAccount,
@@ -50,7 +50,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
               Form(
                 key: _formKey,
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     TextFormField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
@@ -67,7 +67,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                         hintText: enterFirstName,
                       ),
                       keyboardType: TextInputType.name,
-                      onChanged: (value) {
+                      onChanged: (String value) {
                         setState(() {
                           nameValue = value;
                         });
@@ -170,7 +170,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
               ),
               mediumVerticalSizedBox,
               Row(
-                children: [
+                children: <Widget>[
                   Checkbox(
                     value: acceptTerms,
                     activeColor: Theme.of(context).primaryColor,

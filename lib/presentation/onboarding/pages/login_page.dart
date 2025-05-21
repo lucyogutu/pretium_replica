@@ -60,7 +60,7 @@ class _LoginPageState extends State<LoginPage> {
               Form(
                 key: _loginFormKey,
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     TextFormField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
@@ -77,7 +77,7 @@ class _LoginPageState extends State<LoginPage> {
                         hintText: enterYourEmail,
                       ),
                       keyboardType: TextInputType.emailAddress,
-                      onChanged: (value) {
+                      onChanged: (String value) {
                         setState(() {
                           emailValue = value;
                         });
@@ -132,7 +132,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
               Row(
-                children: [
+                children: <Widget>[
                   Checkbox(
                     value: rememberMe,
                     activeColor: Theme.of(context).primaryColor,

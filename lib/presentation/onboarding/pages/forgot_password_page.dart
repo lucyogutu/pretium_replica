@@ -11,7 +11,7 @@ class ForgotPasswordPage extends StatefulWidget {
 }
 
 class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
-  final _formKey = GlobalKey<FormState>();
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   String emailValue = '';
 
   @override
@@ -23,7 +23,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
           padding: const EdgeInsets.all(16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
+            children: <Widget>[
               mediumVerticalSizedBox,
               Text(
                 forgotPassword,
@@ -58,7 +58,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                     hintText: enterYourEmail,
                   ),
                   keyboardType: TextInputType.emailAddress,
-                  onChanged: (value) {
+                  onChanged: (String value) {
                     setState(() {
                       emailValue = value;
                     });

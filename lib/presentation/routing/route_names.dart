@@ -1,4 +1,4 @@
-const rootPage = '/';
-const loginPage = '/login';
-const registerPage = '/register';
-const forgotPasswordPage = '/forgotPassword';
+const String rootPage = '/';
+const String loginPage = '/login';
+const String registerPage = '/register';
+const String forgotPasswordPage = '/forgotPassword';

@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:pretium_replica/Presentation/onboarding/pages/onboarding_page.dart';
 import 'package:pretium_replica/presentation/onboarding/pages/forgot_password_page.dart';
@@ -9,19 +10,19 @@ final GoRouter router = GoRouter(
   routes: <RouteBase>[
     GoRoute(
       path: rootPage,
-      builder: (context, state) => OnboardingPage(),
+      builder: (BuildContext context, GoRouterState state) => OnboardingPage(),
     ),
     GoRoute(
       path: loginPage,
-      builder: (context, state) => LoginPage(),
+      builder: (BuildContext context, GoRouterState state) => LoginPage(),
     ),
     GoRoute(
       path: registerPage,
-      builder: (context, state) => RegistrationPage(),
+      builder: (BuildContext context, GoRouterState state) => RegistrationPage(),
     ),
     GoRoute(
       path: forgotPasswordPage,
-      builder: (context, state) => ForgotPasswordPage(),
+      builder: (BuildContext context, GoRouterState state) => ForgotPasswordPage(),
     ),
   ],
 );

@@ -19,10 +19,10 @@ class MyApp extends StatelessWidget {
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(
-            foregroundColor: WidgetStatePropertyAll(
+            foregroundColor: WidgetStatePropertyAll<Color?>(
               Colors.white,
             ),
-            backgroundColor: WidgetStatePropertyAll(
+            backgroundColor: WidgetStatePropertyAll<Color?>(
               Colors.teal[800],
             ),
           ),
